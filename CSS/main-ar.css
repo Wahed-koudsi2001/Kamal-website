@@ -1,0 +1,25 @@
+.hero_paragraph {
+    font-size: 26px;
+}
+.usps__child.right,
+.usp-card__wrap,
+.input.message,
+.contact-form_wrap,
+.h-usp__child,
+.usp-horizontal__wrap,
+.hero__child,
+.wizard__child.right {
+    text-align: right;
+}
+.usp-icon_wrap {
+    justify-content: end;
+}
+.content-headings__wrapper {
+    padding-right: 25px;
+}
+.main-button-wrapper {
+    justify-content: end;
+}
+.paragraph__wrapper.margin-bottom.hero {
+    width: 100%;
+}
