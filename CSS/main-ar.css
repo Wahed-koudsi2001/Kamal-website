@@ -50,3 +50,21 @@
 .footer__link {
     padding: 0.5em 0.5em 0;
 }
+@media screen and (max-width: 479px) {
+    .footer__c-wrap {
+        grid-template-columns: 1fr;
+    }
+}
+.wahed-copy {
+    width: 100%;
+}
+@media screen and (max-width: 767px) {
+    .footer__logo-wrap {
+        margin-left: auto;
+    }
+}
+@media screen and (max-width: 479px) {
+    .footer__c-wrap.second {
+        grid-template-columns: 1fr;
+    }
+}
