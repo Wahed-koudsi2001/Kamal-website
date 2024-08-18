@@ -8,7 +8,9 @@
 .h-usp__child,
 .usp-horizontal__wrap,
 .hero__child,
-.wizard__child.right {
+.wizard__child.right,
+.block__child.text,
+.p-evolution-grid__parent {
     text-align: right;
 }
 .usp-icon_wrap {
@@ -22,4 +24,9 @@
 }
 .paragraph__wrapper.margin-bottom.hero {
     width: 100%;
+}
+.wahed-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }

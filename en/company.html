@@ -537,7 +537,7 @@
                                                 stroke-width="1.5" stroke-linecap="round" />
                                         </svg></div>
                                 </a>
-                                <a href="/blog" class="footer__link link-underline w-inline-block">
+                                <a href="blog.html" class="footer__link link-underline w-inline-block">
                                     <div class="new-nav-link">Blog</div>
                                     <div class="w-embed"><svg width="85" height="4" viewBox="0 0 85 4" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -587,8 +587,11 @@
                                         class="footer__link w-inline-block w--current">
                                         <div>Company</div>
                                     </a>
-                                    <a href="/blog" class="footer__link w-inline-block">
+                                    <a href="blog.html" class="footer__link w-inline-block">
                                         <div>Blog</div>
+                                    </a>
+                                    <a href="privacy-policy.html" class="footer__link w-inline-block">
+                                        <div>Privacy policy</div>
                                     </a>
                                 </div>
                             </div>
@@ -603,105 +606,12 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.prod.website-files.com/63ce8fdfb773bb355dff79ca/js/webflow.0770ec808.js"
         type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script src="https://stan.bg/js/SplitText.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"></script>
-
-    <script>
-        //Animate Radio Button
-        $('input').on('click', function () {
-            $(this).closest('.demo__radio-group').find('.selected-item').removeClass('selected-item');
-            $(this).siblings('.link_circle').addClass('selected-item');
-            $(this).siblings('.link__checkmark').addClass('selected-item');
-            $(this).closest('.link-demo__radio-btn-wrapper').addClass('selected-item');
-        });
+    <script src="../JS/gsap.min.js"></script>
+    <script src="../JS/ScrollTrigger.min.js"></script>
+    <script src="../JS/SplitText.min.js"></script>
+    <script src="../JS/MotionPathPlugin.min.js"></script>
 
 
-        window.addEventListener("DOMContentLoaded", function () {
-            setTimeout(threeLinesAnimation, 2000);
-            textCircleAnimation();
-            formSubmit();
-        });
-
-        //Marquee
-        function initMarquee(e) { let t = gsap.utils.toArray(e.wrappers); if (t.length) { let r = function e(t, r) { t = gsap.utils.toArray(t), r = r || {}; let n = gsap.timeline({ repeat: r.repeat, paused: r.paused, defaults: { ease: "none" }, onReverseComplete: () => n.totalTime(n.rawTime() + 100 * n.duration()) }), o = t.length, i = t[0].offsetLeft, s = [], a = [], p = [], $ = 0, u = 100 * (r.speed || 1), d = !1 === r.snap ? e => e : gsap.utils.snap(r.snap || 1), _, l, f, m, c, g; for (gsap.set(t, { xPercent(e, t) { let r = a[e] = parseFloat(gsap.getProperty(t, "width", "px")); return p[e] = d(parseFloat(gsap.getProperty(t, "x", "px")) / r * 100 + gsap.getProperty(t, "xPercent")), p[e] } }), gsap.set(t, { x: 0 }), _ = t[o - 1].offsetLeft + p[o - 1] / 100 * a[o - 1] - i + t[o - 1].offsetWidth * gsap.getProperty(t[o - 1], "scaleX") + (parseFloat(r.paddingRight) || 0), g = 0; g < o; g++)c = t[g], l = p[g] / 100 * a[g], m = (f = c.offsetLeft + l - i) + a[g] * gsap.getProperty(c, "scaleX"), n.to(c, { xPercent: d((l - m) / a[g] * 100), duration: m / u }, 0).fromTo(c, { xPercent: d((l - m + _) / a[g] * 100) }, { xPercent: p[g], duration: (l - m + _ - l) / u, immediateRender: !1 }, m / u).add("label" + g, f / u), s[g] = f / u; function x(e, t) { t = t || {}, Math.abs(e - $) > o / 2 && (e += e > $ ? -o : o); let r = gsap.utils.wrap(0, o, e), i = s[r]; return i > n.time() != e > $ && (t.modifiers = { time: gsap.utils.wrap(0, n.duration()) }, i += n.duration() * (e > $ ? 1 : -1)), $ = r, t.overwrite = !0, n.tweenTo(i, t) } return n.next = e => x($ + 1, e), n.previous = e => x($ - 1, e), n.current = () => $, n.toIndex = (e, t) => x(e, t), n.times = s, n.progress(1, !0).progress(0, !0), r.reversed && (n.vars.onReverseComplete(), n.reverse()), n }(t, { repeat: -1 }); r.duration(e.duration) } }
-
-        // iFrame
-        function playIframe() { ScrollTrigger.create({ trigger: ".wizard-video", start: "top bottom", end: "top bottom", once: !0, onEnter() { let t = document.querySelector(".wizard-video"); t.setAttribute("src", "https://player.vimeo.com/video/798424591?background=1&loop=1") } }) }
-        // Form
-        function formSubmit() { let e = document.querySelector(".contact-form_main-wrapper"), t = e.querySelector("[type='submit']"), r = e.querySelector(".b-button__wrap"); r.addEventListener("click", function (e) { e.preventDefault(), t.click() }) }
-
-        function paymentsPowerGridAnimation() {
-            const svg = document.querySelector(".svg-contiant-links");
-            const maskTop = svg.querySelector(".mask-top");
-            const topCircle = maskTop.querySelector("circle");
-            const topPath = maskTop.querySelector("path");
-            const maskBottom = svg.querySelector(".mask-bottom");
-            const bottomCircle = maskBottom.querySelector("circle");
-            const bottomPath = maskBottom.querySelector("path");
-            const { width } = topCircle.getBoundingClientRect();
-
-            ScrollTrigger.create({
-                trigger: svg,
-                start: "top bottom",
-                end: "top bottom",
-                once: true,
-                onEnter: () => {
-                    animateCircle(topCircle, width, topPath);
-                    animateCircle(bottomCircle, width, bottomPath);
-                }
-            });
-
-            function animateCircle(circle, circleWidth, path) {
-                const tl = gsap.timeline();
-                tl.repeat(-1);
-                tl.repeatDelay(0.2);
-
-                tl.fromTo(
-                    circle,
-                    { attr: { cx: () => -circleWidth - 4 } },
-                    { attr: { cx: () => -circleWidth / 2 } }
-                )
-                    .to(
-                        circle,
-                        {
-                            duration: 1.5,
-                            ease: Power2.easeInOut,
-                            motionPath: {
-                                path: path,
-                                align: path,
-                                autoRotate: true,
-                                alignOrigin: [0.5, 0.5],
-                                start: 1,
-                                end: 0,
-                            },
-                        },
-                        "<25%"
-                    )
-                    .fromTo(
-                        circle,
-                        { attr: { cx: () => -width / 2 } },
-                        { attr: { cx: () => 0 } },
-                        "<25%"
-                    );
-
-                return tl;
-            }
-        }
-
-        $('.specific-link').on('click', function () {
-            $('.hamburger__menu').click();
-        });
-
-        var body = $('body');
-        body.addClass('o-hidden');
-        setTimeout(function () {
-            body.removeClass('o-hidden');
-        }, 2500);
-
-
-    </script>
 </body>
 
 </html>
