@@ -30,3 +30,23 @@
     flex-direction: column;
     align-items: end;
 }
+@media screen and (max-width: 767px) {
+    .nav_likns-mobile {
+        padding-top: 2em;
+        text-align: right;
+    }
+}
+.h-usp-card__wrap {
+    align-items: end;
+}
+.footer__child-m {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.end-wahed {
+    width: 100%;
+    justify-content: end;
+}
+.footer__link {
+    padding: 0.5em 0.5em 0;
+}
