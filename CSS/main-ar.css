@@ -10,7 +10,9 @@
 .hero__child,
 .wizard__child.right,
 .block__child.text,
-.p-evolution-grid__parent {
+.p-evolution-grid__parent,
+.wahed-right-2,
+.marquee__text {
     text-align: right;
 }
 .usp-icon_wrap {
@@ -48,7 +50,7 @@
     justify-content: end;
 }
 .footer__link {
-    padding: 0.5em 0.5em 0;
+    padding: 0.5em 0.5em;
 }
 @media screen and (max-width: 479px) {
     .footer__c-wrap {
@@ -67,4 +69,30 @@
     .footer__c-wrap.second {
         grid-template-columns: 1fr;
     }
+}
+.visual-three__top-img {
+    margin-right: 0;
+    margin-left: 8px;
+}
+.visual-three__bottom-img {
+    margin-left: 0;
+    margin-right: 16px;
+}
+.m-b-arrow {
+    margin-right: 0.6em;
+}
+.input_wrap.right-m {
+    margin-left: 0.63em;
+}
+.nav__symbol-wrapper {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+.radio-button-none.w--redirected-checked {
+    margin-right: 0;
+    margin-left: 1.25em;
+}
+.close-embed_svg {
+    margin-left: 6px;
+    margin-right: 0;
 }
